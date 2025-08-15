@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamWorks</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/dream_mai-removebg-preview.png">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+     <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script> 
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
+          <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-white dark:bg-gray-800 font-helvetica" >
+    <header>
+        <nav class="fixed top-0 w-full z-30 bg-white/70 dark:bg-gray-900/70 backdrop-blur-md shadow-md transition-all duration-300 py-2 md:py-4 px-6 md:flex md:items-center md:justify-between">
+
+  <!-- Left: Logo + Menu icon (mobile) -->
+  <div class="flex justify-between items-center">
+    <a href="index.html" class="flex items-center gap-2 text-2xl font-bold text-gray-900 dark:text-gray-100 font-integral hover:scale-110 transition-all duration-300 ease-in-out">
+      <img src="images/dream_mai-removebg-preview.png" alt="Vortex-logo" class="w-12">
+      DREAMWORKS
+    </a>
+    <!-- Hamburger Icon for Mobile -->
+    <button class="text-3xl md:hidden focus:outline-none" onclick="Menu(this)">
+      <img src="images/menu-icon.svg" alt="menu-icon" class="w-6 dark:invert">
+    </button>
+  </div>
+
+  <!-- Right: Menu Items -->
+  <ul class="md:flex md:items-center md:static absolute left-0 w-full md:w-auto bg-white/80 dark:bg-gray-900/90 md:bg-transparent md:dark:bg-transparent shadow-md md:shadow-none md:opacity-100 opacity-0 top-[-400px] transition-all duration-300 ease-in-out md:py-0 py-4 md:pl-0 pl-7" id="navLinks">
+    <li class="mx-4 my-4 md:my-0">
+      <a href="events.html" class="nav-link ">EVENTS</a>
+    </li>
+    <li class="mx-4 my-4 md:my-0">
+      <a href="members.html" class="nav-link">MEMBERS</a>
+    </li>
+  
+    <li class="mx-4 my-4 md:my-0">
+      <a href="result.html" class="nav-link">CAREER</a>
+    </li>
+    
+    <li class="mx-4 my-6 md:my-0">
+                    <img class="moon cursor-pointer w-5" src="images/moon-icon.svg" alt="dark-mode">
+                    <img class="sun cursor-pointer w-5 dark:invert" src="images/sun-icon.svg" alt="light-mode">
+                </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <div class="">
+        <div class="w-1/2 h-screen fixed bg-yellow-500 dark:bg-yellow-600 -ml-28 md:-ml-28 skew-x-[16deg] -z-20" id="bg-cut">
+            <!--bg div-->
+        </div>
+
+
+        <div class="fixed w-screen h-screen backdrop-blur-[2px] -z-10"></div>
+        <main class="flex-col justify-center pt-36 ">
+            <!--main content-->
+            <div class="flex flex-col lg:flex-row justify-around items-center w-full lg:h-[70vh] gap-16">
+                <div class="flex justify-center">
+                    <img class="w-52 sm:w-80 md:w-96" src="images/dream_mai-removebg-preview.png" alt="Vortex-logo">
+                </div>
+                <div class="flex flex-col items-center justify-center gap-4">
+                  <div class="flex justify-center text-5xl sm:text-6xl md:text-8xl font-bold text-gray-900 dark:text-gray-100 my-5 tracking-wider font-integral">DreamWorks</div>
+                  <div class="flex justify-center text-base sm:text-3xl md:text-4xl font-medium text-gray-600 dark:text-gray-300 my-5">The Career Club Of DPS Rohini</div>
+                  <div class="flex justify-center text-base sm:text-2xl md:text-3xl font-medium text-gray-600 dark:text-gray-300 my-5">Let your Dreams Work for you</div>
+                  <div class="flex justify-around items-center w-2/3 mt-4">
+                    <a href="https://chat.whatsapp.com/Fx1AXlWDM8Q0O33ac5k9OZ " target="_blank" class="mr-4 flex text-sm md:text-lg items-center gap-2 rounded py-4 px-4 bg-[#25D366] text-white font-medium hover:scale-105 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
+                      <ion-icon name="logo-whatsapp" class="text-xl"></ion-icon>
+                      WhatsApp
+                    </a>
+                    <a href="https://docs.google.com/document/d/115hDUBZHWdDo6g4lS2ykoTJyr8bWX4LjY37xdUBQT3Y/edit?tab=t.0 " target="_blank" class="flex text-sm md:text-lg items-center gap-2 rounded py-4 px-4 bg-cyan-500 text-white font-medium hover:scale-105 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
+                      <ion-icon name="document-text"></ion-icon>
+                      Brochure
+                    </a>
+                  </div>
+                </div>
+            </div>
+
+            <hr class="w-3/4 h-1 my-16 mx-auto bg-gray-400 opacity-50 border-0 rounded-md">
+
+            <div class="my-16">
+                <!--About us section-->
+                <div class="flex justify-center text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-2 font-integral">About Us</div>
+                <div class="flex flex-col lg:flex-row justify-center items-center my-6 mx-8 md:mx-20 2xl:mx-32 text-lg lg:text-xl 2xl:text-2xl text-gray-800 dark:text-gray-100">
+                  <div class="dark:bg-black dark:bg-opacity-20 backdrop-blur-sm bg-gray-300 p-8 md:p-16 rounded-xl bg-opacity-20 flex justify-center text-center md:my-auto align-middle font-semibold leading-loose max-w-prose text-sm md:text-lg hover:scale-105 transition-smooth">
+                   We're thrilled to launch DreamWorks, the Career Development Club at DPS Rohini, dedicated to inspiring and guiding students toward their future careers. We extend our heartfelt gratitude to our esteemed Principal, Ms. Kanika Sachdeva Govi, for her visionary leadership and support in bringing this initiative to life.
+                  </div>
+                  <div class="flex-shrink-0 flex justify-center my-16 mx-auto md:mx-8">
+                      <img class="min-w-72 md:w-96 2xl:w-[550px] my-auto rounded-md hover:scale-105 transition-all duration-300 ease-in-out" src="images/giant-hands-holding-tiny-office-600nw-1482164285-removebg-preview.png" alt="Vortex :D">
+                  </div>
+                </div>
+            </div>
+            
+            <hr class="w-3/4 h-1 my-16 mx-auto bg-gray-400 opacity-50 border-0 rounded-md">
+
+            <div class="my-16">
+                <!-- socials -->
+                <div class="flex flex-col lg:flex-row justify-center-items-center mx-16">
+                  <div class="flex items-center justify-center w-full lg:w-2/5">
+                    <img src="images/socials.png" alt="" class="hidden lg:block">
+                  </div>
+                  <div class="flex flex-col items-center justify-center flex-1">
+                    <div class="text-3xl md:text-4xl font-bold text-gray-700 dark:text-gray-100 mb-2 font-integral py-10 text-center">STAY IN THE LOOP</div>
+                    <div class="text-md md:text-lg text-gray-900 dark:text-gray-300 mb-4 font-semibold max-w-prose text-center">
+                     Stay connected with us for career tips, event highlights, and behind-the-scenes glimpses from DreamWorks at DPS Rohini. Whether you're exploring future paths, building skills, or just curious, this is your space. Join a vibrant community of students driven by curiosity, ambition, and a passion for growth. Let’s learn, grow, and shape our futures — together.
+                    </div>
+                    <div class="flex items-center justify-around gap-4 py-4">
+
+                      <!-- Discord -->
+                      <a href="https://chat.whatsapp.com/Fx1AXlWDM8Q0O33ac5k9OZ " target="_blank" rel="noopener noreferrer"
+                        class="group relative flex items-center justify-center overflow-hidden bg-[#25D366] text-white px-4 py-4 w-14 hover:w-36 transition-all duration-300 ease-in-out rounded-xl">
+                        <div class="flex justify-center">
+                          <ion-icon name="logo-whatsapp" class="text-2xl transition-transform duration-300 group-hover:-translate-x-10"></ion-icon>
+                        </div>
+                        <span class="font-semibold absolute left-16 opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap">
+                          WhatsApp
+                        </span>
+                      </a>
+
+                      <!-- Instagram -->
+                      <a href="https://www.instagram.com/dreamworks.dpsr/" target="_blank" rel="noopener noreferrer"
+                        class="group relative flex items-center justify-center overflow-hidden bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500 text-white px-4 py-4 w-14 hover:w-36 transition-all duration-300 ease-in-out rounded-xl">
+                        <div class="flex justify-center">
+                          <ion-icon name="logo-instagram" class="text-2xl transition-transform duration-300 group-hover:-translate-x-10"></ion-icon>
+                        </div>
+                        <span class="font-semibold absolute left-14 opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap">
+                          Instagram
+                        </span>
+                      </a>
+
+                     
+
+                      <!-- YouTube -->
+                      <a href="https://www.youtube.com/@DreamWorks-DPSR" target="_blank" rel="noopener noreferrer"
+                        class="group relative flex items-center justify-center overflow-hidden bg-[#FF0000] text-white px-4 py-4 w-14 hover:w-36 transition-all duration-300 ease-in-out rounded-xl">
+                        <div class="flex justify-center">
+                          <ion-icon name="logo-youtube" class="text-2xl transition-transform duration-300 group-hover:-translate-x-10"></ion-icon>
+                        </div>
+                        <span class="font-semibold absolute left-14 opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap">
+                          YouTube
+                        </span>
+                      </a>
+
+                    </div>
+
+                </div>
+
+              </div>        
+
+        </main>
+    </div>
+
+    <footer class="relative bg-yellow-300 dark:bg-yellow-600 pt-8 pb-6">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap text-left lg:text-left">
+            <div class="w-full lg:w-6/12 px-4">
+              <h4 class="text-3xl font-semibold text-gray-200 font-integral uppercase">DreamWorks</h4>
+              <h5 class="text-lg my-1 text-gray-200">
+                The Career Club Of DPS Rohini
+              </h5>
+              <h3 class="text-base my-1 text-gray-200">
+                Let your Dreams Work for you
+              </h3>
+              <div class="mt-6 lg:mb-0 mb-6">
+                <button class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 hover:scale-105 transition-all duration-200" type="button">
+                  <a href="https://chat.whatsapp.com/Fx1AXlWDM8Q0O33ac5k9OZ " target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </button>
+                <button class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 hover:scale-105 transition-all duration-200" type="button">
+                  <a href="https://www.instagram.com/dreamworks.dpsr/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </button>
+                <button class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 hover:scale-105 transition-all duration-200" type="button">
+                  <a href="https://www.youtube.com/@DreamWorks-DPSR" target="_blank"><i class="fab fa-youtube"></i></a>
+                </button>
+              
+              </div>
+            </div>
+            <div class="w-full lg:w-6/12 px-4 text-gray-200">
+              <div class="flex flex-wrap items-top mb-6">
+                <div class="w-full lg:w-4/12 px-4 ml-auto">
+                  <span class="block uppercase text-sm font-semibold mb-2">Useful Links</span>
+                  <ul class="list-unstyled">
+                    <li>
+                        <a class="font-semibold block pb-2 text-sm hover:text-gray-400" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="font-semibold block pb-2 text-sm hover:text-gray-400" href="events.html">Events</a>
+                    </li>
+                    <li>
+                        <a class="font-semibold block pb-2 text-sm hover:text-gray-400" href="members.html">Members</a>
+                    </li>
+                   
+                    <li>
+                        <a class="font-semibold block pb-2 text-sm hover:text-gray-400" href="result.html">Career</a>
+                    </li>
+                    
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="my-6">
+          <div class="flex flex-wrap items-center md:justify-between justify-center text-gray-200">
+            <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+              <div class="text-sm font-semibold py-1">
+                Copyright © <a href="index.html" class="hover:text-gray-400" target="_blank"> DreamWorks.</a> All rights reserved.
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script>
+        function Menu(e) {
+            const list = document.querySelector('ul');
+            const isOpen = e.classList.contains('menu-open');
+
+            if (isOpen) {
+                e.classList.remove('menu-open');
+                list.classList.remove('top-[80px]', 'opacity-100');
+            } else {
+                e.classList.add('menu-open');
+                list.classList.add('top-[80px]', 'opacity-100');
+            }
+        }
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>

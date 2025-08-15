@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamWorks</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/dream_mai-removebg-preview.png">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+     <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script> 
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-white dark:bg-gray-800 font-helvetica" >
+    <header>
+        <nav class="fixed top-0 w-full z-30 bg-white/70 dark:bg-gray-900/70 backdrop-blur-md shadow-md transition-all duration-300 py-2 md:py-4 px-6 md:flex md:items-center md:justify-between">
+
+  <!-- Left: Logo + Menu icon (mobile) -->
+  <div class="flex justify-between items-center">
+    <a href="index.html" class="flex items-center gap-2 text-2xl font-bold text-gray-900 dark:text-gray-100 font-integral hover:scale-110 transition-all duration-300 ease-in-out">
+      <img src="images/dream_mai-removebg-preview.png" alt="Vortex-logo" class="w-12">
+      DreamWorks
+    </a>
+    <!-- Hamburger Icon for Mobile -->
+    <button class="text-3xl md:hidden focus:outline-none" onclick="Menu(this)">
+      <img src="images/menu-icon.svg" alt="menu-icon" class="w-6 dark:invert">
+    </button>
+  </div>
+
+  <!-- Right: Menu Items -->
+  <ul class="md:flex md:items-center md:static absolute left-0 w-full md:w-auto bg-white/80 dark:bg-gray-900/90 md:bg-transparent md:dark:bg-transparent shadow-md md:shadow-none md:opacity-100 opacity-0 top-[-400px] transition-all duration-300 ease-in-out md:py-0 py-4 md:pl-0 pl-7" id="navLinks">
+    <li class="mx-4 my-4 md:my-0">
+      <a href="events.html" class="nav-link ">EVENTS</a>
+    </li>
+    <li class="mx-4 my-4 md:my-0">
+      <a href="members.html" class="nav-link">MEMBERS</a>
+  
+    </li>
+    <li class="mx-4 my-4 md:my-0">
+      <a href="result.html" class="nav-link">CAREER</a>
+    </li>
+    
+    <li class="mx-4 my-6 md:my-0">
+                    <img class="moon cursor-pointer w-5" src="images//moon-icon.svg" alt="dark-mode">
+                    <img class="sun cursor-pointer w-5 dark:invert" src="images//sun-icon.svg" alt="light-mode">
+                </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <div class="">
+        <div class="w-1/2 h-screen fixed bg-yellow-500 dark:bg-yellow-600 -ml-28 md:-ml-28 skew-x-[16deg] -z-20" id="bg-cut">
+            <!--bg div-->
+        </div>
+
+
+        <div class="fixed w-screen h-screen backdrop-blur-[2px] -z-10"></div>
+        
+
+         <main class="pt-40 mb-20 w-3/4 mx-auto relative">
+            <div class="flex justify-start items-center">
+                <h2 class="font-integral text-6xl tracking-tight text-gray-900 dark:text-gray-50">Our Team</h2>
+            </div>
+            <p class="text-gray-700 dark:text-gray-200 text-lg mt-6">
+                Meet the team that forms the foundation of DreamWorks. It is because all of these people that such a big event was made possible.
+            </p>
+            
+        </main>
+       
+
+        
+
+        <!-- MEMBERS SECTION -->
+        <section class="members mgb-large">
+            <!-- leads -->
+            <p class="font-bold text-3xl mb-8 text-gray-800 dark:text-gray-100">Core</p>
+            <div class="members-grid">
+                <div class="member">
+                    <img src="images/members/himarsha.jpg" alt="member image" class="member__img">
+                    <div class="member__text">
+                        <p class="member__name">Himarsha Dawar</p>
+                        <p class="member__post">President/Founder</p>
+                    </div>
+                </div>    
+                
+
+               
+
+                <div class="member">
+                    <img src="images/members/baid.jpg" alt="member image" class="member__img">
+                    <div class="member__text">
+                        <p class="member__name">Navya Baid</p>
+                        <p class="member__post">Vice President</p>
+                    </div>
+                </div>
+
+                 <div class="member">
+                    <img src="images/members/pracum.jpg" alt="member image" class="member__img">
+                    <div class="member__text">
+                        <p class="member__name">Pratham Kapoor</p>
+                        <p class="member__post">Management Head</p>
+                    </div>
+                </div>
+
+
+                <div class="member">
+                    <img src="images/members/myra.jpg" alt="member image" class="member__img">
+                    <div class="member__text">
+                        <p class="member__name">Myrah Vahie</p>
+                        <p class="member__post">Management Team</p>
+                    </div>
+                </div>
+
+               
+            
+            </div>
+            <!-- hods -->
+            <p class="font-bold text-3xl mb-8  text-gray-800 dark:text-gray-100">Heads of Departments</p>
+            <div class="members-grid">
+                <div class="member">
+                    <img src="images/members/toshi.jpg" alt="member image" class="member__img">
+                    <div class="member__text">
+                        <p class="member__name">Toshi Mittal</p>
+                        <p class="member__post">Head Psychometrics</p>
+                    </div>
+                </div>
+
+                <div class="member">
+                    <img src="images/members/ananya.jpg" alt="member image" class="member__img">
+                    <div class="member__text">
+                        <p class="member__name">Ananya Sharma</p>
+                        <p class="member__post">Head CareerSearch</p>
+                    </div>
+                </div>
+
+                <div class="member">
+                    <img src="images/members/abhavya.jpg" alt="member image" class="member__img">
+                    <div class="member__text">
+                        <p class="member__name">Abhavya Gupta</p>
+                        <p class="member__post">Head Profile Building </p>
+                    </div>
+                </div>
+
+                <div class="member">
+                    <img src="images/members/avanya.jpg" alt="member image" class="member__img">
+                    <div class="member__text">
+                        <p class="member__name">Avanya Saxena</p>
+                        <p class="member__post">Head Global Exposure</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- execs -->
+            <!-- <p class="font-bold text-3xl mb-8 items-center justify-center  text-gray-800 dark:text-gray-100">Executive Members</p>
+            <div class="members-grid">
+                <div class="member">
+                    <img src="images/members/" alt="member image" class="member__img">
+                    <div class="member__text">
+                        <p class="member__name">Rishit Narang</p>
+                        <p class="member__post">Executive Member</p>
+                    </div>
+                </div>
+            </div> -->
+       
+            <!-- members -->
+            <p class="font-bold text-3xl mb-8  text-gray-800 dark:text-gray-100">Members</p>
+            <div class="members-grid-small ">
+                <p class="member__name my-4 whitespace-nowrap">Anshika Kaushik</p>
+                <p class="member__name my-4 whitespace-nowrap">Maanya Verma</p>
+                <p class="member__name my-4 whitespace-nowrap">Ekam Gandhi</p>
+                <p class="member__name my-4 whitespace-nowrap">Hitansh Miglani</p>
+                <p class="member__name my-4 whitespace-nowrap">Amaira Ann Jose</p>
+                <p class="member__name my-4 whitespace-nowrap">Vaibhav Verma</p>
+                <p class="member__name my-4 whitespace-nowrap">Bhadresh Chadha</p>
+                <p class="member__name my-4 whitespace-nowrap">Shreya Bansal</p>
+                <p class="member__name my-4 whitespace-nowrap">Aryahi Mittal</p>
+                <p class="member__name my-4 whitespace-nowrap">Aaditya Raj</p>
+                <p class="member__name my-4 whitespace-nowrap">Rudransh Miglani</p>
+
+                <p class="member__name my-4 whitespace-nowrap">Ishita</p>
+                <p class="member__name my-4 whitespace-nowrap">Aradhya Gupta</p>
+                <p class="member__name my-4 whitespace-nowrap">Mitaanshi Kaushik</p>
+                <p class="member__name my-4 whitespace-nowrap">Plaksha Yadav</p>
+                <p class="member__name my-4 whitespace-nowrap">Samaira Arjun Singh</p>
+                <p class="member__name my-4 whitespace-nowrap">Rishita Pargai</p>
+
+                        <p class="member__name my-4 whitespace-nowrap">Dhruv</p>
+                <p class="member__name my-4 whitespace-nowrap">Maitreyi Chaudhary</p>
+                <p class="member__name my-4 whitespace-nowrap">Riya Gupta</p>
+                        <p class="member__name my-4 whitespace-nowrap">Saburi Puri</p>
+                <p class="member__name my-4 whitespace-nowrap">Mehal Tanejah</p>
+               
+            </div>
+                           
+            
+        </section>
+
+    </div>
+
+    <footer class="relative bg-yellow-300 dark:bg-yellow-600 pt-8 pb-6">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap text-left lg:text-left">
+            <div class="w-full lg:w-6/12 px-4">
+              <h4 class="text-3xl font-semibold text-gray-200 font-integral uppercase">DreamWorks</h4>
+              <h5 class="text-lg my-1 text-gray-200">
+                The Career Club Of DPS Rohini
+              </h5>
+              <h3 class="text-base my-1 text-gray-200">
+                Let your Dreams Work for you
+              </h3>
+              <div class="mt-6 lg:mb-0 mb-6">
+                <button class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 hover:scale-105 transition-all duration-200" type="button">
+                  <a href="https://chat.whatsapp.com/Fx1AXlWDM8Q0O33ac5k9OZ " target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </button>
+                <button class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 hover:scale-105 transition-all duration-200" type="button">
+                  <a href="https://www.instagram.com/vortex_dpsr/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </button>
+                <button class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 hover:scale-105 transition-all duration-200" type="button">
+                  <a href="https://www.youtube.com/@DreamWorks-DPSR" target="_blank"><i class="fab fa-youtube"></i></a>
+                </button>
+                
+              </div>
+            </div>
+            <div class="w-full lg:w-6/12 px-4 text-gray-200">
+              <div class="flex flex-wrap items-top mb-6">
+                <div class="w-full lg:w-4/12 px-4 ml-auto">
+                  <span class="block uppercase text-sm font-semibold mb-2">Useful Links</span>
+                  <ul class="list-unstyled">
+                    <li>
+                        <a class="font-semibold block pb-2 text-sm hover:text-gray-400" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="font-semibold block pb-2 text-sm hover:text-gray-400" href="events.html">Events</a>
+                    </li>
+                    <li>
+                        <a class="font-semibold block pb-2 text-sm hover:text-gray-400" href="members.html">Members</a>
+                    </li>
+                   
+                    <li>
+                        <a class="font-semibold block pb-2 text-sm hover:text-gray-400" href="result.html">Career</a>
+                    </li>
+                    
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="my-6">
+          <div class="flex flex-wrap items-center md:justify-between justify-center text-gray-200">
+            <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+              <div class="text-sm font-semibold py-1">
+                Copyright © <a href="index.html" class="hover:text-gray-400" target="_blank"> DreamWorks.</a> All rights reserved.
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script>
+        function Menu(e) {
+            const list = document.querySelector('ul');
+            const isOpen = e.classList.contains('menu-open');
+
+            if (isOpen) {
+                e.classList.remove('menu-open');
+                list.classList.remove('top-[80px]', 'opacity-100');
+            } else {
+                e.classList.add('menu-open');
+                list.classList.add('top-[80px]', 'opacity-100');
+            }
+        }
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>

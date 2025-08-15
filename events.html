@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamWorks</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/dream_mai-removebg-preview.png">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-white dark:bg-gray-800 font-helvetica">
+    <header>
+        <nav class="fixed top-0 w-full z-30 bg-white/70 dark:bg-gray-900/70 backdrop-blur-md shadow-md transition-all duration-300 py-2 md:py-4 px-6 md:flex md:items-center md:justify-between">
+            <!-- Left: Logo + Menu icon (mobile) -->
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-2 text-2xl font-bold text-gray-900 dark:text-gray-100 font-integral hover:scale-110 transition-all duration-300 ease-in-out">
+                    <img src="images/dream_mai-removebg-preview.png" alt="Vortex-logo" class="w-12">
+                    DreamWorks
+                </a>
+                <!-- Hamburger Icon for Mobile -->
+                <button class="text-3xl md:hidden focus:outline-none" onclick="Menu(this)">
+                    <img src="images/menu-icon.svg" alt="menu-icon" class="w-6 dark:invert">
+                </button>
+            </div>
+
+            <!-- Right: Menu Items -->
+            <ul class="md:flex md:items-center md:static absolute left-0 w-full md:w-auto bg-white/80 dark:bg-gray-900/90 md:bg-transparent md:dark:bg-transparent shadow-md md:shadow-none md:opacity-100 opacity-0 top-[-400px] transition-all duration-300 ease-in-out md:py-0 py-4 md:pl-0 pl-7" id="navLinks">
+                <li class="mx-4 my-4 md:my-0">
+                    <a href="events.html" class="nav-link">EVENTS</a>
+                </li>
+                <li class="mx-4 my-4 md:my-0">
+                    <a href="members.html" class="nav-link">MEMBERS</a>
+                </li>
+               
+                <li class="mx-4 my-4 md:my-0">
+                    <a href="result.html" class="nav-link">CAREER</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0 flex items-center gap-3">
+                    <img class="moon cursor-pointer w-5" src="images/moon-icon.svg" alt="dark-mode">
+                    <img class="sun cursor-pointer w-5 dark:invert" src="images/sun-icon.svg" alt="light-mode">
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        <!-- Background shapes -->
+        <div class="w-1/2 h-screen fixed bg-yellow-500 dark:bg-yellow-600 -ml-28 md:-ml-28 skew-x-[16deg] -z-20" id="bg-cut"></div>
+        <div class="fixed w-screen h-screen backdrop-blur-[2px] -z-10"></div>
+
+        <!-- Dimmer for popups -->
+        <div id="dim" class="fixed inset-0 bg-black bg-opacity-50 z-[49] hidden"></div>
+
+        <main class="flex-col justify-center pt-36">
+            <div class="mx-auto mb-8 text-center">
+                <h2 class="mb-4 text-4xl md:text-6xl tracking-tight font-extrabold font-integral text-gray-900 dark:text-white">Events</h2>
+            </div>
+
+            <!-- Dynamic event cards -->
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 py-8 px-4 mx-auto w-full max-w-7xl justify-center" id="event-container">
+                <!-- JS will populate here -->
+            </div>
+        </main>
+    </div>
+
+    <footer class="relative bg-yellow-300 dark:bg-yellow-600 pt-8 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap text-left lg:text-left">
+                <div class="w-full lg:w-6/12 px-4">
+                    <h4 class="text-3xl font-semibold text-gray-200 font-integral uppercase">DreamWorks</h4>
+                    <h5 class="text-lg my-1 text-gray-200">The Career Club Of DPS Rohini</h5>
+                    <h3 class="text-base my-1 text-gray-200">Let your Dreams Work for you</h3>
+                   <div class="mt-6 lg:mb-0 mb-6">
+                <button class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 hover:scale-105 transition-all duration-200" type="button">
+                  <a href="https://chat.whatsapp.com/Fx1AXlWDM8Q0O33ac5k9OZ " target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </button>
+                <button class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 hover:scale-105 transition-all duration-200" type="button">
+                  <a href="https://www.instagram.com/vortex_dpsr/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </button>
+                <button class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 hover:scale-105 transition-all duration-200" type="button">
+                  <a href="https://www.youtube.com/@DreamWorks-DPSR" target="_blank"><i class="fab fa-youtube"></i></a>
+                </button>
+                
+              </div>
+                </div>
+                <div class="w-full lg:w-6/12 px-4 text-gray-200">
+                    <div class="flex flex-wrap items-top mb-6">
+                        <div class="w-full lg:w-4/12 px-4 ml-auto">
+                            <span class="block uppercase text-sm font-semibold mb-2">Useful Links</span>
+                            <ul>
+                                <li><a class="footer-link" href="index.html">Home</a></li>
+                                <li><a class="footer-link" href="events.html">Events</a></li>
+                                <li><a class="footer-link" href="members.html">Members</a></li>
+                                <li><a class="footer-link" href="alumni.html">Alumni</a></li>
+                                <li><a class="footer-link" href="schedule.html">Schedule</a></li>
+                                <li><a class="footer-link" href="result.html">Career</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6">
+            <div class="flex flex-wrap items-center md:justify-between justify-center text-gray-200">
+                <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+                    <div class="text-sm font-semibold py-1">
+                        Copyright © <a href="index.html" class="hover:text-gray-400">DreamWorks.</a> All rights reserved.
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function Menu(e) {
+            const list = document.getElementById('navLinks');
+            const isOpen = e.classList.contains('menu-open');
+            if (isOpen) {
+                e.classList.remove('menu-open');
+                list.classList.remove('top-[80px]', 'opacity-100');
+            } else {
+                e.classList.add('menu-open');
+                list.classList.add('top-[80px]', 'opacity-100');
+            }
+        }
+    </script>
+    <script src="index.js"></script>
+    <script src="events.js"></script>
+</body>
+</html>

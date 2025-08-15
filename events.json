@@ -1,0 +1,121 @@
+[
+  {
+    "id": 1,
+    "title": "Career Quest",
+    "subtitle": "Interactive Career Bingo & Personality Round",
+    "description": "Welcome to Career Quest, a dynamic event where participants dive into the world of emerging and unconventional careers through an exciting twist. This interactive experience is designed to challenge students’ curiosity and decision-making skills through career clues, strategic thinking, and a dash of self-awareness. Each participant receives a unique Career Bingo card filled with diverse career options. Career clues will be announced one by one. Match them to your card and aim for rows, corners, or a full house — just like in Tambola. After the game, participants will face a Rapid Fire Personality Round — a set of fun questions designed to give them insight into their dominant personality traits. Based on their responses, they’ll get quick feedback on the kind of careers that might match their natural inclinations.",
+    "details": {
+      "class": "IX–X",
+      "venue": "MSQ/MPH",
+      "date": "18 August 2025"
+    },
+    "judgement_criteria": [
+      "First Five Careers",
+      "Top Row",
+      "Middle Row",
+      "Bottom Row",
+      "Full House"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Bandhanwar of Dreams",
+    "subtitle": "Career Toran Craft",
+    "description": "Welcome to Bandhanwar of Dreams, where imagination meets inspiration! In this fun and creative activity, students will design Career Torans or Wall Hangings, inspired by traditional festive decorations like Bandhanwars or Diwali Torans. Each toran will represent a unique and exciting career from the future! Students are required to form teams of 2 and explore a fascinating, lesser-known, or future-ready career. Each toran should include career name, a 1-line description, useful skills and subjects, creative designs, and a slogan or tagline. Students are requested to research the career of their choice and bring the required material for the competition.",
+    "details": {
+      "class": "VII–VIII",
+      "venue": "Vacant Rooms",
+      "tentative_date_of_submission": "13 October 2025"
+    },
+    "judgement_criteria": {
+      "Creativity & Visual Appeal": 25,
+      "Clarity of Career Information": 25,
+      "Use of Craft Materials": 20,
+      "Neatness & Effort": 20,
+      "Original Ideas or Decoration": 10
+    }
+  },
+  {
+    "id": 3,
+    "title": "Career Day",
+    "subtitle": "Expert Talks & Career Exploration",
+    "description": "Step into the world of possibilities at Expert Talks & Career Day — a unique opportunity for students to connect directly with industry professionals from a variety of fields. Through engaging talks, interactive Q&A sessions, and small-group discussions, students will gain first-hand insights into career pathways, required skills, and real-world challenges. The event is designed to broaden horizons, break stereotypes, and help students make informed academic and career choices. From creative industries to cutting-edge technology, finance to healthcare, each session will spark curiosity and encourage goal-oriented planning.",
+    "details": {
+      "class": "IX–XII",
+      "venue": "School Auditorium & Breakout Rooms",
+      "tentative_date": "Last week of October 2025"
+    }
+  },
+  {
+    "id": 4,
+    "title": "Campus Communiqué",
+    "subtitle": "The Professional Skills Challenge",
+    "description": "Step into the world of professional communication and career readiness! Campus Communiqué is a high-energy, three-round competition that tests how well students present themselves, both in person and on paper, and how they collaborate in high-pressure discussions. Participants will showcase their introduction skills, resume-building expertise, and group discussion ability — all essential tools for future academic and career success.",
+    "details": {
+      "class": "XI–XII",
+      "venue": "MSQ/MPH",
+      "tentative_date": "1st week of November 2025"
+    },
+    "rounds": [
+      {
+        "name": "Self-Introduction",
+        "marks": 10,
+        "criteria": {
+          "Clarity & Fluency": 3,
+          "Confidence & Body Language": 3,
+          "Content Relevance": 2,
+          "Time Management": 2
+        }
+      },
+      {
+        "name": "CV/Resume Presentation",
+        "marks": 15,
+        "criteria": {
+          "Format & Structure": 4,
+          "Content Quality": 5,
+          "Relevance & Clarity": 3,
+          "Presentation Skills": 3
+        }
+      },
+      {
+        "name": "Group Discussion",
+        "marks": 15,
+        "criteria": {
+          "Content & Examples": 5,
+          "Communication & Clarity": 4,
+          "Listening & Teamwork": 3,
+          "Initiative & Leadership": 3
+        }
+      }
+    ],
+    "total_marks": 40
+  },
+  {
+    "id": 5,
+    "title": "Passion Quest",
+    "subtitle": "Career Treasure Hunt",
+    "description": "Welcome to Passion Quest — an exciting treasure hunt with a twist! Students will work in teams to navigate a trail of career-themed clues hidden across the school. Each clue will lead to a new location, where the team must solve a short puzzle, riddle, or mini-task related to an emerging career. The hunt will challenge participants to think creatively, work together, and learn about fascinating careers of the future all while racing against time!",
+    "details": {
+      "class": "VII–VIII",
+      "venue": "School Campus (Multiple Locations)",
+      "tentative_date": "1st week of November 2025"
+    }
+  },
+  {
+    "id": 6,
+    "title": "FutureScapes",
+    "subtitle": "Creative Career Presentations",
+    "description": "Welcome to FutureScapes, where students step into tomorrow’s world and bring it alive today! In this high-energy speaker series, participants will research and present on cutting-edge, emerging fields — but with a creative twist. Forget boring lectures — we’re talking sci-fi movie trailers, meme-packed PowerPoints, live futuristic skits, or even mock late-night talk shows. Students will have just 2 minutes to wow the audience with their bold visions of the future. Bonus points if you make them believe they’ll be working on Mars soon!",
+    "details": {
+      "class": "IX–XI",
+      "venue": "MSQ/MPH",
+      "tentative_date": "14 November 2025"
+    },
+    "judgement_criteria": {
+      "Creativity & Originality": 30,
+      "Clarity & Accuracy of Career Information": 25,
+      "Presentation Style & Engagement": 25,
+      "Boldness & Convincing Power": 20
+    }
+  }
+]
