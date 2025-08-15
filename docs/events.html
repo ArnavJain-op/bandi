@@ -11,11 +11,9 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="bg-white dark:bg-gray-800 font-helvetica">
+<body class="bg-white dark:bg-gray-800 font-helvetica h-screen w-screen overflow-x-hidden">
     <header>
         <nav class="fixed top-0 w-full z-30 bg-white/70 dark:bg-gray-900/70 backdrop-blur-md shadow-md transition-all duration-300 py-2 md:py-4 px-6 md:flex md:items-center md:justify-between">
             <!-- Left: Logo + Menu icon (mobile) -->
@@ -38,9 +36,9 @@
                 <li class="mx-4 my-4 md:my-0">
                     <a href="members.html" class="nav-link">MEMBERS</a>
                 </li>
-               
+                
                 <li class="mx-4 my-4 md:my-0">
-                    <a href="result.html" class="nav-link">CAREER</a>
+                    <a href="resources.html" class="nav-link">RESOURCES</a>
                 </li>
                 <li class="mx-4 my-6 md:my-0 flex items-center gap-3">
                     <img class="moon cursor-pointer w-5" src="images/moon-icon.svg" alt="dark-mode">
@@ -52,7 +50,7 @@
 
     <div>
         <!-- Background shapes -->
-        <div class="w-1/2 h-screen fixed bg-yellow-500 dark:bg-yellow-600 -ml-28 md:-ml-28 skew-x-[16deg] -z-20" id="bg-cut"></div>
+        <div class="w-1/2 h-screen fixed bg-yellow-300 dark:bg-yellow-500 -ml-28 md:-ml-28 skew-x-[16deg] -z-20" id="bg-cut"></div>
         <div class="fixed w-screen h-screen backdrop-blur-[2px] -z-10"></div>
 
         <!-- Dimmer for popups -->
@@ -70,7 +68,7 @@
         </main>
     </div>
 
-    <footer class="relative bg-yellow-300 dark:bg-yellow-600 pt-8 pb-6">
+    <footer class="relative bg-yellow-500 dark:bg-yellow-600 pt-8 pb-6">
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap text-left lg:text-left">
                 <div class="w-full lg:w-6/12 px-4">
@@ -100,7 +98,7 @@
                                 <li><a class="footer-link" href="members.html">Members</a></li>
                                 <li><a class="footer-link" href="alumni.html">Alumni</a></li>
                                 <li><a class="footer-link" href="schedule.html">Schedule</a></li>
-                                <li><a class="footer-link" href="result.html">Career</a></li>
+                                <li><a class="footer-link" href="resources.html">Resources</a></li>
                             </ul>
                         </div>
                     </div>
@@ -118,19 +116,43 @@
         </div>
     </footer>
 
-    <script>
-        function Menu(e) {
-            const list = document.getElementById('navLinks');
-            const isOpen = e.classList.contains('menu-open');
-            if (isOpen) {
-                e.classList.remove('menu-open');
-                list.classList.remove('top-[80px]', 'opacity-100');
-            } else {
-                e.classList.add('menu-open');
-                list.classList.add('top-[80px]', 'opacity-100');
-            }
-        }
-    </script>
+        <script>
+                function Menu(e) {
+                        const list = document.getElementById('navLinks');
+                        const isOpen = e.classList.contains('menu-open');
+                        if (isOpen) {
+                                e.classList.remove('menu-open');
+                                list.classList.remove('top-[80px]', 'opacity-100');
+                        } else {
+                                e.classList.add('menu-open');
+                                list.classList.add('top-[80px]', 'opacity-100');
+                        }
+                }
+                // Light/Dark mode toggle
+                document.addEventListener('DOMContentLoaded', function() {
+                    const moon = document.querySelector('.moon');
+                    const sun = document.querySelector('.sun');
+                    function setDark(dark) {
+                        if (dark) {
+                            document.documentElement.classList.add('dark');
+                            localStorage.setItem('theme', 'dark');
+                        } else {
+                            document.documentElement.classList.remove('dark');
+                            localStorage.setItem('theme', 'light');
+                        }
+                    }
+                    if (moon && sun) {
+                        moon.onclick = () => setDark(true);
+                        sun.onclick = () => setDark(false);
+                    }
+                    // On load
+                    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                        setDark(true);
+                    } else {
+                        setDark(false);
+                    }
+                });
+        </script>
     <script src="index.js"></script>
     <script src="events.js"></script>
 </body>

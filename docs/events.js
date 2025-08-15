@@ -22,27 +22,25 @@ window.closePopup = function(id) {
     if (popup) {
         popup.classList.remove("scale-100");
         popup.classList.add("scale-0");
-        // hide dimmer and restore scroll after transition
         setTimeout(() => {
-            if (popup.parentNode) popup.parentNode.removeChild(popup);
-            dimmer.classList.add('hidden');
-            enableScroll();
+            popup.classList.add("hidden");
         }, 300);
+        enableScroll();
+        dimmer.classList.add('hidden');
     }
 }
 
 window.openPopup = function(id) {
     const popup = document.querySelector(`.popup[data-id="${id}"]`);
     if (popup) {
-        // ensure it's visible and animate scale
         popup.classList.remove("hidden");
-        // force reflow so transition works
-        void popup.offsetWidth;
-        popup.classList.remove("scale-0");
-        popup.classList.add("scale-100");
+        setTimeout(() => {
+            popup.classList.remove("scale-0");
+            popup.classList.add("scale-100");
+        }, 10);
         disableScroll();
-        dimmer.classList.remove('hidden');
         popup.focus();
+        dimmer.classList.remove('hidden');
     }
 }
 
@@ -78,40 +76,44 @@ function renderEvents(events) {
 
 function renderPopup(event) {
     const popup = document.createElement("div");
-    popup.className = `popup fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] md:w-[50vw] h-[90vh] md:h-[70vh] bg-white dark:bg-gray-800 backdrop-blur-3xl bg-opacity-75 rounded-xl shadow-xl z-50 scale-0 transition-transform duration-300 ease-in-out flex flex-col overflow-hidden`;
+    popup.className = `popup fixed top-1/2 left-1/2 tranform -translate-x-1/2 -translate-y-1/2 w-[90vw] md:w-[50vw] h-[90vh] md:h-[70vh] bg-white dark:bg-gray-800 backdrop-blur-3xl bg-opacity-75 rounded-xl shadow-xl z-50 scale-0 transition-transform duration-300 ease-in-out flex flex-col overflow-hidden`;
     popup.setAttribute("data-id", `${event.id}`);
 
-    const details = event.details || {};
-    const detailsHTML = Object.entries(details)
-        .map(([key, value]) => `${key.charAt(0).toUpperCase() + key.slice(1).replace(/_/g, ' ')}: ${value}`)
-        .join('<br>');
+    const details = event.details;
+    const dateLine = details.date ? `Date: ${details.date} <br>` : details.tentative_date ? `Tentative Date: ${details.tentative_date} <br>` : details.tentative_date_of_submission ? `Tentative Date of Submission: ${details.tentative_date_of_submission} <br>` : "";
+    const venueLine = details.venue ? `Venue: ${details.venue} <br>` : "";
 
-    let additionalContent = '';
-
+    let judgementCriteria = "";
     if (event.judgement_criteria) {
         if (Array.isArray(event.judgement_criteria)) {
-            additionalContent += '<br><strong>Judgement Criteria:</strong><br>' +
-                event.judgement_criteria.join('<br>');
-        } else {
-            additionalContent += '<br><strong>Judgement Criteria:</strong><br>' +
-                Object.entries(event.judgement_criteria)
-                    .map(([key, value]) => `${key}: ${value} points`)
-                    .join('<br>');
+            judgementCriteria = `<p class='font-semibold mb-1 text-xl'>Judgement Criteria:</p><ul class='list-disc ml-6 text-md mb-4 text-gray-700 dark:text-gray-300'>`;
+            event.judgement_criteria.forEach(criteria => {
+                judgementCriteria += `<li>${criteria}</li>`;
+            });
+            judgementCriteria += `</ul>`;
+        } else if (typeof event.judgement_criteria === 'object') {
+            judgementCriteria = `<p class='font-semibold mb-1 text-xl'>Judgement Criteria:</p><ul class='list-disc ml-6 text-lg mb-4 text-gray-700 dark:text-gray-300'>`;
+            for (const [key, value] of Object.entries(event.judgement_criteria)) {
+                judgementCriteria += `<li >${key}: ${value} points</li>`;
+            }
+            judgementCriteria += `</ul>`;
         }
     }
 
+    let rounds = "";
     if (event.rounds) {
-        additionalContent += '<br><br><strong>Rounds:</strong><br>' +
-            event.rounds.map(round => {
-                if (!round) return '';
-                let roundDetails = `${round.name || 'Round'}${round.marks ? ` (${round.marks} marks)` : ''}<br>`;
-                if (round.criteria) {
-                    roundDetails += Object.entries(round.criteria)
-                        .map(([key, value]) => `- ${key}: ${value} marks`)
-                        .join('<br>');
+        rounds = `<p class='font-semibold'>Rounds:</p><ul class='list-disc ml-6'>`;
+        event.rounds.forEach(round => {
+            rounds += `<li>${round.name} (${round.marks} marks)</li>`;
+            if (round.criteria) {
+                rounds += `<ul class='list-disc ml-6'>`;
+                for (const [key, value] of Object.entries(round.criteria)) {
+                    rounds += `<li>${key}: ${value} points</li>`;
                 }
-                return roundDetails;
-            }).join('<br>');
+                rounds += `</ul>`;
+            }
+        });
+        rounds += `</ul>`;
     }
 
     popup.innerHTML = `
@@ -121,18 +123,29 @@ function renderPopup(event) {
             </button>
         </div>
         <div class="px-12 text-gray-900 dark:text-gray-100">
-            <p class="text-3xl font-bold mb-1">${event.title || ''}</p>
-            <p class="text-xl font-medium mb-4 tracking-widest">${event.subtitle || ''}</p>
+            <p class="text-3xl font-bold mb-1">${event.title}</p>
+            <p class="text-xl font-medium mb-4 tracking-widest">${event.subtitle}</p>
         </div>
         <div class="px-10 py-4 flex-1 overflow-y-auto custom-scrollbar">
             <p class="text-lg mb-4 font-semibold text-gray-800 dark:text-gray-200 max-w-prose">
-                ${detailsHTML}
-                ${additionalContent}
+                ${venueLine}
+                ${dateLine}
             </p>
             <p class="text-lg mb-4 text-gray-700 dark:text-gray-300 max-w-prose" style="white-space: pre-line;">
-                ${event.description || ''}
+                ${event.description}
             </p>
+
+            
+            <div class="text-gray-900 dark:text-gray-100">
+                <p class="text-3xl font-bold mb-1">${judgementCriteria}</p>
+            </div>
+            <div class=" text-gray-900 dark:text-gray-100">
+                <p class="text-3xl font-bold mb-1">${rounds}</p>
+            </div>
+
         </div>
+
+
     `;
 
     popup.setAttribute("tabindex", "-1");

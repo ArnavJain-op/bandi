@@ -11,8 +11,6 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
      <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script> 
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
-          <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-          <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-white dark:bg-gray-800 font-helvetica" >
@@ -40,9 +38,8 @@
       <a href="members.html" class="nav-link">MEMBERS</a>
     </li>
     
-   
-    <li class="mx-4 my-4 md:my-0">
-      <a href="result.html" class="nav-link">CAREER</a>
+   <li class="mx-4 my-4 md:my-0">
+  <a href="resources.html" class="nav-link">RESOURCES</a>
     </li>
     
     <li class="mx-4 my-6 md:my-0">
@@ -55,7 +52,7 @@
     </header>
 
     <div class="">
-        <div class="w-1/2 h-screen fixed bg-yellow-500 dark:bg-yellow-600 -ml-28 md:-ml-28 skew-x-[16deg] -z-20" id="bg-cut">
+        <div class="w-1/2 h-screen fixed bg-yellow-300 dark:bg-yellow-500 -ml-28 md:-ml-28 skew-x-[16deg] -z-20" id="bg-cut">
             <!--bg div-->
         </div>
 
@@ -66,7 +63,7 @@
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
           
           <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-            <h2 class="mb-4 text-4xl md:text-6xl font-bold tracking-wider font-integral text-gray-900 dark:text-white">Careers</h2>
+            <h2 class="mb-4 text-4xl md:text-6xl font-bold tracking-wider font-integral text-gray-900 dark:text-white">Resources</h2>
           </div>
 
           <hr class="w-3/4 h-1 my-16 mx-auto bg-gray-400 opacity-50 border-0 rounded-md">
@@ -91,7 +88,7 @@
         </main>
     </div>
 
-    <footer class="relative bg-yellow-300 dark:bg-yellow-600 pt-8 pb-6">
+    <footer class="relative bg-yellow-500 dark:bg-yellow-600 pt-8 pb-6">
         <div class="container mx-auto px-4">
           <div class="flex flex-wrap text-left lg:text-left">
             <div class="w-full lg:w-6/12 px-4">
@@ -132,7 +129,7 @@
                     </li>
                    
                     <li>
-                        <a class="font-semibold block pb-2 text-sm hover:text-gray-400" href="result.html">Career</a>
+                        <a class="font-semibold block pb-2 text-sm hover:text-gray-400" href="resources.html">Resources</a>
                     </li>
                     
                     
@@ -157,7 +154,6 @@
         function Menu(e) {
             const list = document.querySelector('ul');
             const isOpen = e.classList.contains('menu-open');
-
             if (isOpen) {
                 e.classList.remove('menu-open');
                 list.classList.remove('top-[80px]', 'opacity-100');
@@ -166,6 +162,30 @@
                 list.classList.add('top-[80px]', 'opacity-100');
             }
         }
+        // Light/Dark mode toggle
+        document.addEventListener('DOMContentLoaded', function() {
+          const moon = document.querySelector('.moon');
+          const sun = document.querySelector('.sun');
+          function setDark(dark) {
+            if (dark) {
+              document.documentElement.classList.add('dark');
+              localStorage.setItem('theme', 'dark');
+            } else {
+              document.documentElement.classList.remove('dark');
+              localStorage.setItem('theme', 'light');
+            }
+          }
+          if (moon && sun) {
+            moon.onclick = () => setDark(true);
+            sun.onclick = () => setDark(false);
+          }
+          // On load
+          if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            setDark(true);
+          } else {
+            setDark(false);
+          }
+        });
     </script>
     <script src="index.js"></script>
 </body>

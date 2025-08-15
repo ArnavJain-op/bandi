@@ -11,8 +11,6 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
      <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script> 
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
-      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-      <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-white dark:bg-gray-800 font-helvetica" >
@@ -41,7 +39,7 @@
   
     </li>
     <li class="mx-4 my-4 md:my-0">
-      <a href="result.html" class="nav-link">CAREER</a>
+  <a href="resources.html" class="nav-link">RESOURCES</a>
     </li>
     
     <li class="mx-4 my-6 md:my-0">
@@ -54,7 +52,7 @@
     </header>
 
     <div class="">
-        <div class="w-1/2 h-screen fixed bg-yellow-500 dark:bg-yellow-600 -ml-28 md:-ml-28 skew-x-[16deg] -z-20" id="bg-cut">
+        <div class="w-1/2 h-screen fixed bg-yellow-300 dark:bg-yellow-500 -ml-28 md:-ml-28 skew-x-[16deg] -z-20" id="bg-cut">
             <!--bg div-->
         </div>
 
@@ -67,7 +65,7 @@
                 <h2 class="font-integral text-6xl tracking-tight text-gray-900 dark:text-gray-50">Our Team</h2>
             </div>
             <p class="text-gray-700 dark:text-gray-200 text-lg mt-6">
-                Meet the team that forms the foundation of DreamWorks. It is because all of these people that such a big event was made possible.
+                  Meet the team that forms the foundation of DreamWorks. It is because all of these people that such a big event was made possible.
             </p>
             
         </main>
@@ -83,8 +81,8 @@
                 <div class="member">
                     <img src="images/members/himarsha.jpg" alt="member image" class="member__img">
                     <div class="member__text">
-                        <p class="member__name">Himarsha Dawar</p>
-                        <p class="member__post">President/Founder</p>
+                          <p class="member__name">Himarsha Dawar</p>
+                          <p class="member__post">Founder and President</p>
                     </div>
                 </div>    
                 
@@ -111,8 +109,8 @@
                 <div class="member">
                     <img src="images/members/myra.jpg" alt="member image" class="member__img">
                     <div class="member__text">
-                        <p class="member__name">Myrah Vahie</p>
-                        <p class="member__post">Management Team</p>
+                          <p class="member__name">Myrah Vahie</p>
+                          <p class="member__post">Design Head</p>
                     </div>
                 </div>
 
@@ -125,32 +123,32 @@
                 <div class="member">
                     <img src="images/members/toshi.jpg" alt="member image" class="member__img">
                     <div class="member__text">
-                        <p class="member__name">Toshi Mittal</p>
-                        <p class="member__post">Head Psychometrics</p>
+                          <p class="member__name">Toshi</p>
+                          <p class="member__post">Head ( Psychometric Testing and Self-awareness )</p>
                     </div>
                 </div>
 
                 <div class="member">
                     <img src="images/members/ananya.jpg" alt="member image" class="member__img">
                     <div class="member__text">
-                        <p class="member__name">Ananya Sharma</p>
-                        <p class="member__post">Head CareerSearch</p>
+                          <p class="member__name">Ananya</p>
+                          <p class="member__post">Head ( Emerging Careers and Research )</p>
                     </div>
                 </div>
 
                 <div class="member">
                     <img src="images/members/abhavya.jpg" alt="member image" class="member__img">
                     <div class="member__text">
-                        <p class="member__name">Abhavya Gupta</p>
-                        <p class="member__post">Head Profile Building </p>
+                          <p class="member__name">Abhavya</p>
+                          <p class="member__post">Head ( Profile Building and Experience )</p>
                     </div>
                 </div>
 
                 <div class="member">
                     <img src="images/members/avanya.jpg" alt="member image" class="member__img">
                     <div class="member__text">
-                        <p class="member__name">Avanya Saxena</p>
-                        <p class="member__post">Head Global Exposure</p>
+                          <p class="member__name">Avanya</p>
+                          <p class="member__post">Head ( Studying Abroad and Global Exposure )</p>
                     </div>
                 </div>
 
@@ -193,7 +191,7 @@
                 <p class="member__name my-4 whitespace-nowrap">Maitreyi Chaudhary</p>
                 <p class="member__name my-4 whitespace-nowrap">Riya Gupta</p>
                         <p class="member__name my-4 whitespace-nowrap">Saburi Puri</p>
-                <p class="member__name my-4 whitespace-nowrap">Mehal Tanejah</p>
+                  <p class="member__name my-4 whitespace-nowrap">Mehal Taneja</p>
                
             </div>
                            
@@ -202,7 +200,7 @@
 
     </div>
 
-    <footer class="relative bg-yellow-300 dark:bg-yellow-600 pt-8 pb-6">
+    <footer class="relative bg-yellow-500 dark:bg-yellow-600 pt-8 pb-6">
         <div class="container mx-auto px-4">
           <div class="flex flex-wrap text-left lg:text-left">
             <div class="w-full lg:w-6/12 px-4">
@@ -242,7 +240,7 @@
                     </li>
                    
                     <li>
-                        <a class="font-semibold block pb-2 text-sm hover:text-gray-400" href="result.html">Career</a>
+                        <a class="font-semibold block pb-2 text-sm hover:text-gray-400" href="resources.html">Resources</a>
                     </li>
                     
                     
@@ -267,7 +265,6 @@
         function Menu(e) {
             const list = document.querySelector('ul');
             const isOpen = e.classList.contains('menu-open');
-
             if (isOpen) {
                 e.classList.remove('menu-open');
                 list.classList.remove('top-[80px]', 'opacity-100');
@@ -276,6 +273,30 @@
                 list.classList.add('top-[80px]', 'opacity-100');
             }
         }
+        // Light/Dark mode toggle
+        document.addEventListener('DOMContentLoaded', function() {
+          const moon = document.querySelector('.moon');
+          const sun = document.querySelector('.sun');
+          function setDark(dark) {
+            if (dark) {
+              document.documentElement.classList.add('dark');
+              localStorage.setItem('theme', 'dark');
+            } else {
+              document.documentElement.classList.remove('dark');
+              localStorage.setItem('theme', 'light');
+            }
+          }
+          if (moon && sun) {
+            moon.onclick = () => setDark(true);
+            sun.onclick = () => setDark(false);
+          }
+          // On load
+          if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            setDark(true);
+          } else {
+            setDark(false);
+          }
+        });
     </script>
     <script src="index.js"></script>
 </body>
